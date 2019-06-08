@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -e
-grunt
+./node_modules/.bin/grunt
 cp js/bio-pv.dbg.js bio-pv.js
 npm run-script build-biojs
 echo 'writing mangled output to bio-pv.min.js'

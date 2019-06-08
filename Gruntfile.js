@@ -102,9 +102,9 @@ module.exports = function(grunt) {
       }
     },
     jshint : {
-      options: { 
-        multistr :true, 
-        curly : true, 
+      options: {
+        multistr :true,
+        curly : true,
         eqeqeq : true,
         forin : true,
         maxlen: 80,
@@ -139,7 +139,7 @@ module.exports = function(grunt) {
           amdclean = require('amdclean'),
           outputFile = data.path;
           fs.writeFileSync(outputFile, amdclean.clean({
-            filePath: outputFile, 
+            filePath: outputFile,
             transformAMDChecks : false,
             aggressiveOptimizations : true,
             createAnonymousAMDModule : true,
@@ -167,6 +167,6 @@ module.exports = function(grunt) {
 
   // Default task(s).
   grunt.registerTask('default', [
-    'jshint', 'requirejs:js', 'removelogging', 'uglify'
+    'requirejs:js', 'removelogging', 'uglify'
   ]);
 };
